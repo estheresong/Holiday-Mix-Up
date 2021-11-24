@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
     //change thresholds to -1 to 1
 
     //go out of blend tree and return to base layer in animator
-    // should have entry move to idle and that move into movement. Movement will return back to idle
+    // should have entry move to idle and that move into movement.
+    // Movement will return back to idle
     //Use conditions to control when the state will happen
 
     //drag animator component into anim space in player
