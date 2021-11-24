@@ -462,7 +462,7 @@ MonoBehaviour:
   rb: {fileID: 603237323}
   moveBy: {x: 0, y: 0}
   anim: {fileID: 603237324}
-  moveSpeed: 2
+  moveSpeed: 0
 --- !u!4 &603237322
 Transform:
   m_ObjectHideFlags: 0
