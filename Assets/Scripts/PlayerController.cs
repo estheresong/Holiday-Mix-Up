@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed; //moderates speed
 
     public float maxX;
+    public float maxY;
 
 
     // Update is called once per frame
@@ -29,17 +30,27 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Vertical", moveBy.y);
         anim.SetFloat("Speed", moveBy.sqrMagnitude);
 
-        if (transform.position.y >= 225)
-        {
-            transform.position = new Vector3(transform.position.x, 225, 0);
-        }
-        else if (transform.position.y <= 50)
-        {
-            transform.position = new Vector3(transform.position.x, 50, 0);
-        }
-        
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
+        transform.position = pos;
+/*
+        Vector3 pos1 = transform.position;
+        pos.y = Mathf.Clamp(pos.y, -maxY, maxY);
+        transform.position = pos1;
+        */
+
+                if (transform.position.y >= 0.55f)
+                {
+                    transform.position = new Vector3(transform.position.x, 0.55f, 0);
+                }
+                else if (transform.position.y <= -2.65f)
+                {
+                    transform.position = new Vector3(transform.position.x, -2.65f, 0);
+                }
+      
     }
-    
+   
+
     private void FixedUpdate()
     {
         rb.position += moveBy * moveSpeed* Time.fixedDeltaTime; 
