@@ -14,8 +14,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed; //moderates speed
 
     public float maxX;
-    public float maxY;
-
+    public float maxY, minY;
 
     // Update is called once per frame
     void Update()
@@ -33,19 +32,15 @@ public class PlayerController : MonoBehaviour
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
         transform.position = pos;
-/*
-        Vector3 pos1 = transform.position;
-        pos.y = Mathf.Clamp(pos.y, -maxY, maxY);
-        transform.position = pos1;
-        */
 
-                if (transform.position.y >= 0.55f)
+
+                if (transform.position.y >= maxY)
                 {
-                    transform.position = new Vector3(transform.position.x, 0.55f, 0);
+                    transform.position = new Vector3(transform.position.x, maxY, 0);
                 }
-                else if (transform.position.y <= -2.65f)
+                else if (transform.position.y <= minY)
                 {
-                    transform.position = new Vector3(transform.position.x, -2.65f, 0);
+                    transform.position = new Vector3(transform.position.x, minY, 0);
                 }
       
     }
