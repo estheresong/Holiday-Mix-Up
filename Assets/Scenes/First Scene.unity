@@ -209,7 +209,6 @@ GameObject:
   - component: {fileID: 276779273}
   - component: {fileID: 276779275}
   - component: {fileID: 276779274}
-  - component: {fileID: 276779276}
   m_Layer: 5
   m_Name: Foreground
   m_TagString: Untagged
@@ -274,32 +273,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276779272}
   m_CullTransparentMesh: 1
---- !u!61 &276779276
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276779272}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000030517578, y: -143.52623}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 814.4755, y: 179.38321}
-  m_EdgeRadius: 0
 --- !u!1 &576872266
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,8 +496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 353.99997, y: -30.000004}
-  m_SizeDelta: {x: 80, y: 60}
+  m_AnchoredPosition: {x: 350, y: -40}
+  m_SizeDelta: {x: 60, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766293882
 MonoBehaviour:
@@ -1323,11 +1296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435921490469239603, guid: 3c2e6b28039e2854f8cbe0cc54bc0fb5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.3495
       objectReference: {fileID: 0}
     - target: {fileID: 3435921490469239603, guid: 3c2e6b28039e2854f8cbe0cc54bc0fb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -79
+      value: -20.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2e6b28039e2854f8cbe0cc54bc0fb5, type: 3}

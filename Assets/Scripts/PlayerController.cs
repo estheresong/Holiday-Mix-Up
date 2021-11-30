@@ -13,10 +13,14 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public float moveSpeed; //moderates speed
 
+    public float maxX;
+
 
     // Update is called once per frame
     void Update()
     {
+
+        
         moveBy.x = Input.GetAxisRaw("Horizontal");
         moveBy.y = Input.GetAxisRaw("Vertical");
         Debug.Log("x = " + moveBy.x + "y = " + moveBy.y);
@@ -24,11 +28,23 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Horizontal", moveBy.x);
         anim.SetFloat("Vertical", moveBy.y);
         anim.SetFloat("Speed", moveBy.sqrMagnitude);
-    }
 
+        if (transform.position.y >= 225)
+        {
+            transform.position = new Vector3(transform.position.x, 225, 0);
+        }
+        else if (transform.position.y <= 50)
+        {
+            transform.position = new Vector3(transform.position.x, 50, 0);
+        }
+        
+    }
+    
     private void FixedUpdate()
     {
         rb.position += moveBy * moveSpeed* Time.fixedDeltaTime; 
+        
+
     }
 
 
@@ -46,4 +62,6 @@ public class PlayerController : MonoBehaviour
     //drag animator component into anim space in player
 
     //change value in move speed to 2 to increase speed of actor
+
+    //-160 to -20
 }
