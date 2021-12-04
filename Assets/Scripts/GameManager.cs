@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {
 
         public Button exit;
+        public Button openPopUp;
+        public Button closePopUp;
+
+        public GameObject popUp;
 
 
     // Start is called before the first frame update
@@ -26,6 +30,24 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("sceneBuildIndex to load: " + sceneNumber);
         SceneManager.LoadScene(sceneNumber);
+    }
+
+    public void OpenPopUp()
+    {
+        if (openPopUp)
+        {
+            popUp.SetActive(true);
+            Debug.Log("The pop up has been opened!");
+        }
+
+    }
+    public void ClosePopUp()
+    {
+        if (closePopUp)
+        {
+            popUp.SetActive(false);
+            Debug.Log("The pop up has been closed!");
+        }
     }
     public void Exit_Game()
     {
