@@ -1,8 +1,4 @@
-# F21_Proj_2A_Song_Esther
+# Holiday Mix-Up Escape Game
+Individual Class Project
 
-
-I've been initializing git before adding a gitignore file
-I didn't realize this was a problem until just now, so I had to recreate my project again.
-All my git commit history is in F21_Proj_2A_Song_Esther_OLD
-
-Ready for grading :)
+To edit, needs unity version 2020.3.18f1
