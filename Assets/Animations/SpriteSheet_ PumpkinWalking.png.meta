@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -463,6 +464,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheet_ PumpkinWalking_4: -7880130335903722670
+      SpriteSheet_ PumpkinWalking_2: 624753806355128865
+      SpriteSheet_ PumpkinWalking_1: -8677734026619650188
+      SpriteSheet_ PumpkinWalking_6: 9102042711233384955
+      SpriteSheet_ PumpkinWalking_3: 2904191919434305338
+      SpriteSheet_ PumpkinWalking_14: 4923867101324409439
+      SpriteSheet_ PumpkinWalking_11: 426770340726664169
+      SpriteSheet_ PumpkinWalking_15: -9048737181809410142
+      SpriteSheet_ PumpkinWalking_13: 7836921266752718163
+      SpriteSheet_ PumpkinWalking_12: 4056310446919939488
+      SpriteSheet_ PumpkinWalking_8: -810960114302483875
+      SpriteSheet_ PumpkinWalking_5: -1788377564734066106
+      SpriteSheet_ PumpkinWalking_10: 1575696937109702259
+      SpriteSheet_ PumpkinWalking_9: 231588990900286211
+      SpriteSheet_ PumpkinWalking_7: 562007860526690987
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
 
-        public Button exit;
-        public Button openPopUp;
-        public Button closePopUp;
+    public Button exit;
+    public Button openPopUp;
+    public Button closePopUp;
+    public GameObject popUp;
+    public GameObject spritePopUp;
 
-        public GameObject popUp;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public GameObject inventoryKey;
+    public GameObject inventoryHammer;
+    private void Update()
     {
-        
-    }
+        if (Singleton.Instance.hasHammer)
+        {
+            inventoryHammer.SetActive(true);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
 
+        if (Singleton.Instance.hasKey)
+        {
+            inventoryKey.SetActive(true);
+            inventoryHammer.SetActive(false);
+        }
+    }
     public void LoadSceneByNumber(int sceneNumber)
     {
         Debug.Log("sceneBuildIndex to load: " + sceneNumber);
@@ -37,6 +41,7 @@ public class GameManager : MonoBehaviour
         if (openPopUp)
         {
             popUp.SetActive(true);
+            spritePopUp.SetActive(true);
             Debug.Log("The pop up has been opened!");
         }
 
@@ -46,16 +51,18 @@ public class GameManager : MonoBehaviour
         if (closePopUp)
         {
             popUp.SetActive(false);
+            spritePopUp.SetActive(false);
             Debug.Log("The pop up has been closed!");
         }
     }
+
     public void Exit_Game()
     {
-        if (exit)
-        {
-          UnityEditor.EditorApplication.isPlaying = false;
-          Debug.Log("Game has ended.");
-        }
-
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        Debug.Log("Game has ended.");
     }
 }

@@ -6,6 +6,15 @@ public class Singleton : MonoBehaviour
 {
     public static Singleton Instance { get; private set; }
 
+    public bool hasKey = false;
+    public bool hasHammer = false;
+
+    public string gameDiff = null;
+
+    public List<Sprite> changeColor;
+    public int colorIndex;
+    public string charName = "";
+
     public void Awake()
     {
 
@@ -18,6 +27,11 @@ public class Singleton : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    public void ResetGame()
+    {
 
     }
 }
